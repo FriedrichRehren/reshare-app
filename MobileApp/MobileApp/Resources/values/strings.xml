@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">MobileApp</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">reshare</string>
+  <string name="navigation_drawer_open">Öffne Navigation</string>
+  <string name="navigation_drawer_close">Schließe Navigation</string>
+  <string name="action_settings">Einstellungen</string>
+
+  <string name="account_name">Max Mustermann</string>
+  <string name="account_email">mustermann@reshare.de</string>
 </resources>

@@ -1,6 +1,5 @@
-﻿using System;
-using Android;
-using Android.App;
+﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -8,10 +7,12 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Widget;
+using System;
 
 namespace MobileApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -37,7 +38,7 @@ namespace MobileApp
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if(drawer.IsDrawerOpen(GravityCompat.Start))
+            if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
                 drawer.CloseDrawer(GravityCompat.Start);
             }
@@ -66,45 +67,45 @@ namespace MobileApp
 
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+            View view = (View)sender;
+            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong).SetAction("Action", (View.IOnClickListener)null).Show();
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
 
-            if (id == Resource.Id.nav_camera)
-            {
-                // Handle the camera action
-            }
-            else if (id == Resource.Id.nav_gallery)
-            {
+            LinearLayout layoutHome = FindViewById<LinearLayout>(Resource.Id.layout_home);
+            LinearLayout layoutFavs = FindViewById<LinearLayout>(Resource.Id.layout_favs);
+            LinearLayout layoutOffers = FindViewById<LinearLayout>(Resource.Id.layout_offers);
+            LinearLayout layoutCreateOffer = FindViewById<LinearLayout>(Resource.Id.layout_createOffer);
+            LinearLayout layoutAccount = FindViewById<LinearLayout>(Resource.Id.layout_account);
 
-            }
-            else if (id == Resource.Id.nav_slideshow)
-            {
+            layoutHome.Visibility = ViewStates.Invisible;
+            layoutFavs.Visibility = ViewStates.Invisible;
+            layoutOffers.Visibility = ViewStates.Invisible;
+            layoutCreateOffer.Visibility = ViewStates.Invisible;
+            layoutAccount.Visibility = ViewStates.Invisible;
 
-            }
-            else if (id == Resource.Id.nav_manage)
-            {
-
-            }
-            else if (id == Resource.Id.nav_share)
-            {
-
-            }
-            else if (id == Resource.Id.nav_send)
-            {
-
-            }
+            if (id == Resource.Id.nav_home)
+                layoutHome.Visibility = ViewStates.Visible;
+            else if (id == Resource.Id.nav_favs)
+                layoutFavs.Visibility = ViewStates.Visible;
+            else if (id == Resource.Id.nav_offers)
+                layoutOffers.Visibility = ViewStates.Visible;
+            else if (id == Resource.Id.nav_createOffer)
+                layoutCreateOffer.Visibility = ViewStates.Visible;
+            else if (id == Resource.Id.nav_account)
+                layoutAccount.Visibility = ViewStates.Visible;
+            else if (id == Resource.Id.nav_loginOut)
+            { }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
@@ -112,4 +113,3 @@ namespace MobileApp
         }
     }
 }
-
