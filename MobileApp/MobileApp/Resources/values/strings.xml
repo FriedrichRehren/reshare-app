@@ -1,9 +1,12 @@
 <resources>
-  <string name="app_name">reshare</string>
-  <string name="navigation_drawer_open">Öffne Navigation</string>
-  <string name="navigation_drawer_close">Schließe Navigation</string>
-  <string name="action_settings">Einstellungen</string>
+	<string name="app_name">reshare</string>
+	<string name="navigation_drawer_open">Öffne Navigation</string>
+	<string name="navigation_drawer_close">Schließe Navigation</string>
+	<string name="action_settings">Einstellungen</string>
 
-  <string name="account_name">Max Mustermann</string>
-  <string name="account_email">mustermann@reshare.de</string>
+	<string name="account_name">Max Mustermann</string>
+	<string name="account_email">mustermann@reshare.de</string>
+
+	<string name="placeholder1">AMD Ryzen 3 3300X</string>
+	<string name="placeholder2">AMD Ryzen 3 3300X 4-Kern Prozessor</string>
 </resources>

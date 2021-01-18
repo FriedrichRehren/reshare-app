@@ -33,6 +33,8 @@ namespace MobileApp
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+
+            navigationView.SetCheckedItem(Resource.Id.nav_home);
         }
 
         public override void OnBackPressed()
@@ -68,7 +70,7 @@ namespace MobileApp
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
             View view = (View)sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong).SetAction("Action", (View.IOnClickListener)null).Show();
+            Snackbar.Make(view, "Kontaktiere Support", Snackbar.LengthLong).SetAction("Action", (View.IOnClickListener)null).Show();
         }
 
         public bool OnNavigationItemSelected(IMenuItem item)

@@ -12,11 +12,103 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible" >
+        android:visibility="visible">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Layout Start" />
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:textSize="@dimen/heading"
+            android:text="Favoriten" />
+
+        <HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
+            
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+                android:orientation="horizontal">
+                
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:textSize="@dimen/heading"
+            android:text="Zuletzt Eingestellt" />
+
+        <HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
+            
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+                android:orientation="horizontal">
+                
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:textSize="@dimen/heading"
+            android:text="Beliebt" />
+
+        <HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
+            
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+                android:orientation="horizontal">
+                
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+                <include layout="@layout/itempresentersmall"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:textSize="@dimen/heading"
+            android:text="Zuletzt Angesehen" />
+
+        <HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+            
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+                android:orientation="horizontal">
+                
+                <include layout="@layout/itempresentersmall"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -24,11 +116,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Layout Favoriten" />
+        android:visibility="invisible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -36,11 +143,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Layout Angebote" />
+        android:visibility="invisible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+    			android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+                <include layout="@layout/itempresenterlarge"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -48,7 +179,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible" >
+        android:visibility="invisible">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +192,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="invisible" >
+        android:visibility="invisible">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
